@@ -35,7 +35,7 @@
        that you fully re-index after changing this setting as it can
        affect both how text is indexed and queried.
   -->
-  <luceneMatchVersion>5.0.0</luceneMatchVersion>
+  <luceneMatchVersion>7.1.0</luceneMatchVersion>
 
   <!-- Data Directory
 
@@ -174,7 +174,7 @@
          have some sort of hard autoCommit to limit the log size.
       -->
      <autoCommit> 
-       <maxTime>${solr.autoCommit.maxTime:15000}</maxTime> 
+       <maxTime>${solr.autoCommit.maxTime:60000}</maxTime> 
        <openSearcher>false</openSearcher> 
      </autoCommit>
 
@@ -184,7 +184,7 @@
          faster and more near-realtime friendly than a hard commit.
       -->
      <autoSoftCommit> 
-       <maxTime>${solr.autoSoftCommit.maxTime:-1}</maxTime> 
+       <maxTime>${solr.autoSoftCommit.maxTime:15000}</maxTime> 
      </autoSoftCommit>
 
   </updateHandler>
@@ -422,6 +422,8 @@
       <str name="spellcheck.dictionary">default</str>
       <str name="spellcheck.extendedResults">true</str>
       <str name="spellcheck.collate">true</str>
+      <str name="df">text</str>
+      <str name="q.op">AND</str>
     </lst>
     <arr name="last-components">
       <str>spellcheck</str>
@@ -435,6 +437,7 @@
        <str name="wt">json</str>
        <str name="indent">true</str>
        <str name="df">text</str>
+       <str name="q.op">AND</str>
      </lst>
      <arr name="last-components">
        <str>spellcheck</str>
