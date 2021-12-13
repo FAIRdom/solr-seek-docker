@@ -1,4 +1,4 @@
-FROM solr:8.9
+FROM solr:8.11
 
 LABEL maintainer="Stuart Owen <orcid.org/0000-0003-2130-0865>"
 
