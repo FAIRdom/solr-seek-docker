@@ -269,8 +269,5 @@
         or to add multiple fields to the same field for easier/faster
         searching.  -->
 
-  <!-- Use copyField to copy the fields you want to run spell checking
-       on into one field. For example: -->
-  <copyField source="*_text"  dest="textSpell" />
-  <copyField source="*_s"  dest="textSpell" />
+
 </schema>
